@@ -57,7 +57,6 @@ body {
 
 .link {
     text-decoration: none;
-    outline: transparent;
 }
 
 .header {
@@ -151,8 +150,8 @@ body {
     color: var(--first-accent-color);
 }
 
-.header-tel {
-    margin-left: 30px;
+.header-item-connect:not(:last-child) {
+    margin-right: 30px;
 }
 
 .header-connect {
@@ -339,7 +338,7 @@ body {
 .team {
     background-color: var(--third-background-color);
     padding-top: 94px;
-    padding-bottom: 47px;
+    padding-bottom: 94px;
 }
 
 .team-title {
@@ -435,7 +434,7 @@ body {
 }
 
 .clients {
-    padding-top: 47px;
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -611,7 +610,8 @@ body {
     padding: 6px 22px;
     border-radius: 4px;
     transition: color 250ms var(--timing-function),
-        background-color 250ms var(--timing-function);
+        background-color 250ms var(--timing-function),
+        box-shadow 250ms var(--timing-function);
 }
 
 .filters-btn:hover,
@@ -676,11 +676,12 @@ body {
     letter-spacing: 0.03em;
     color: var(--third-text-color);
     padding: 63px 24px;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms linear;
 }
 
-.work-item:hover .wrap-text {
+.work-link:hover .wrap-text,
+.work-link:focus .wrap-text {
     transform: translateY(0);
 }
 
@@ -692,9 +693,8 @@ body {
 }
 
 .work-content {
-    background: var(--first-background-color);
     border: 1px solid #EEEEEE;
-    border-top: transparent;
+    border-top: none;
     padding: 20px 24px;
 }
 
